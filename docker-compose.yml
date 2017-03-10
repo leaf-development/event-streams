@@ -1,0 +1,25 @@
+event-source:
+  image: leafdevelopment/event-source-app
+  ports:
+   - 8080
+  environment:
+   - spring_cloud_stream_kafka_binder_brokers=messaging-stream
+   - spring_cloud_stream_kafka_binder_zkNodes=messaging-stream
+  links:
+   - messaging-stream
+messaging-stream:
+  image: spotify/kafka
+  ports:
+   - "9092:9092"
+   - "2181:2181"
+  environment:
+   - ADVERTISED_HOST=$DOCKER_IP # If you want to connect use cmd line tools etc
+event-log-sink:
+  image: leafdevelopment/event-log-sink-app
+  ports:
+   - 8080
+  environment:
+   - spring_cloud_stream_kafka_binder_brokers=messaging-stream
+   - spring_cloud_stream_kafka_binder_zkNodes=messaging-stream
+  links:
+   - messaging-stream
