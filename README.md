@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lfarmer/event-streams.svg?branch=master)](https://travis-ci.org/lfarmer/event-streams)
+
 # Event Stream Processing
 
 This project aims to provide a simple demonstration of how event stream processing works with spring + kafka
