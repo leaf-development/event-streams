@@ -37,14 +37,6 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
                 <configuration>
                     <imageName>leafdevelopment/${docker.image}</imageName>
                     <baseImage>anapsix/alpine-java:8</baseImage>
