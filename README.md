@@ -15,7 +15,7 @@ This project aims to provide a simple demonstration of how event stream processi
 ##  Build project (Maven)
 
 1. Open terminal at project root
-2. Run `mvn clean install`
+2. Run `mvn clean install -Pinstall-docker`
 
 You should see build output that indicates the docker images are being created and stored in your local docker registry.
 
